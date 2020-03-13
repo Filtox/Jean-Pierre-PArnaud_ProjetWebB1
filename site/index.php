@@ -1,8 +1,17 @@
+<?php
+require_once 'includes/functions.php';
+
+$page = 'index';
+if ( isset( $_GET[ 'page' ] ) ) {
+  $page = $_GET[ 'page' ];
+}
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>labonnepoir, site de petites annonces gratuites</title>
+    <title><?= getTitle($page) ?></title>
+<!-- <title>labonnepoir, site de petites annonces gratuites</title> -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-grid.css">
@@ -22,7 +31,8 @@
 <nav id="nav_bar" class="navbar navbar-expand-lg navbar-light bg-light"> <a style="font-family: upgrade" class="navbar-brand" href="#">labonnepoir</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav m-auto">
+        <img class="img-fluid logo" src="images/pear.png">
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto">
@@ -33,7 +43,7 @@
   </div>
 </nav>
 <div class="container">
-    <p>yolo</p>
+  <p>yolo</p>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -46,8 +56,8 @@
       </ul>
     </div>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
     </form>
   </nav>
 </div>

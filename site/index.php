@@ -30,9 +30,7 @@ if ( isset( $_GET[ 'page' ] ) ) {
 <link rel="shortcut icon" href="favicon.png">
 </head>
 <body>
-<div id="banner">
-  <h2 style="font-family: upgrade">labonnepoir</h2>
-</div>
+<img style="width: 100%;" alt="" src="images/pear3_labonnepoir_couper.png">
 <nav id="nav_bar" class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav m-auto">
     <img class="img-fluid logo" src="images/pear.png">
@@ -40,16 +38,16 @@ if ( isset( $_GET[ 'page' ] ) ) {
   <a style="font-family: upgrade" class="navbar-brand" href="index.php">labonnepoir</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="form-inline my-2 my-lg-0">
+    <form style="margin-left: auto;" class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"> <a class="nav-link" href="pages/search.php">Recherche &#45; <i class="fas fa-search"></i></a></li>
         <li class="nav-item active"> <a class="nav-link" href="pages/login/login.html">Se connecter</a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="pages/signin.php">S'inscrire</a> </li>
       </ul>
     </form>
   </div>
 </nav>
 <div class="container">
-  <p>yolo</p>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -58,12 +56,6 @@ if ( isset( $_GET[ 'page' ] ) ) {
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
         </li>
         <li class="nav-item active telprice" style="margin-left: 20px; margin-right: 20px;">Prix</li>
-        <li class="nav-item tailleordi">
-          <div id="html5" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
-          <select id="input-select">
-          </select>
-          <input type="number" min="0" max="100" step="1" id="input-number">
-        </li>
       </ul>
     </div>
     <form class="form-inline my-2 my-lg-0">
@@ -71,7 +63,6 @@ if ( isset( $_GET[ 'page' ] ) ) {
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
     </form>
   </nav>
-</div>
 <br>
 <br>
 <br>
@@ -536,6 +527,12 @@ if ( isset( $_GET[ 'page' ] ) ) {
   </div>
   <div class="apn-be"><span id="be-s" class="teal-apn"></span><span id="be-m" class="teal-apn"></span></div>
 </div>
+<div class="example">
+			<div id="skipstep" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+    </div>
+    <span class="example-val" id="skip-value-lower"></span>
+    <span class="example-val" id="skip-value-upper"></span>
+</div>
 <footer> </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
@@ -560,48 +557,34 @@ if ( isset( $_GET[ 'page' ] ) ) {
 });
 </script> 
 <script>
-var select = document.getElementById('input-select');
+var skipSlider = document.getElementById('skipstep');
 
-// Append the option elements
-for (var i = 0; i <= 100; i++) {
-
-    var option = document.createElement("option");
-    option.text = i;
-    option.value = i;
-
-    select.appendChild(option);
-}
-        
-var html5Slider = document.getElementById('html5');
-
-noUiSlider.create(html5Slider, {
-    start: [10, 90],
-    connect: true,
+noUiSlider.create(skipSlider, {
     range: {
         'min': 0,
-        'max': 100
-    }
+        '10%': 10,
+        '20%': 20,
+        '30%': 30,
+        // Nope, 40 is no fun.
+        '40%': 40,
+        '50%': 50,
+        '60%': 60,
+        '70%': 70,
+        '80%': 80,
+        '90%': 90,
+        'max': 15000
+    },
+    snap: true,
+    start: [20, 90]
 });
-        
-var inputNumber = document.getElementById('input-number');
+    
+var skipValues = [
+    document.getElementById('skip-value-lower'),
+    document.getElementById('skip-value-upper')
+];
 
-html5Slider.noUiSlider.on('update', function (values, handle) {
-
-var value = values[handle];
-
-    if (handle) {
-        inputNumber.value = value;
-    } else {
-        select.value = Math.round(value);
-    }
-});
-
-select.addEventListener('change', function () {
-    html5Slider.noUiSlider.set([this.value, null]);
-});
-
-inputNumber.addEventListener('change', function () {
-    html5Slider.noUiSlider.set([null, this.value]);
+skipSlider.noUiSlider.on('update', function (values, handle) {
+    skipValues[handle].innerHTML = values[handle];
 });
 </script>
 </body>

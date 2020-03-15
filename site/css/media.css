@@ -1,0 +1,35 @@
+/* CSS Document */
+
+@media (min-width: 576px) {
+    .telprice {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .telprice {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .tailleordi {
+        width: 300px;
+    }
+    .telprice {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tailleordi {
+        width: 300px;
+    }
+    .telprice {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}

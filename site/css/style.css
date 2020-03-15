@@ -22,3 +22,22 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
+._2B0td {
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._2o72G path {
+    cursor: pointer;
+    fill: #3d6abe;
+    stroke: #1e357d;
+    -webkit-transition: fill .3s;
+    -o-transition: fill .3s;
+    transition: fill .3s;
+}
+
+._2o72G path:hover {
+    fill: #28a745;
+}

@@ -5,13 +5,14 @@
         margin-bottom: 20px;
         margin-top: 20px;
     }
+	._2B0td {
+		width: 60%;
+	}
+	
 }
 
 @media (min-width: 768px) {
-    .telprice {
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
+	
 }
 
 @media (min-width: 992px) {
@@ -25,11 +26,5 @@
 }
 
 @media (min-width: 1200px) {
-    .tailleordi {
-        width: 300px;
-    }
-    .telprice {
-        margin-bottom: auto;
-        margin-top: auto;
-    }
+	
 }

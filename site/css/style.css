@@ -1,8 +1,5 @@
 /* CSS Document */
 
-html, body {
-	height: 2000px;
-}
 .navbar-fixed {
 	top: 0;
 	z-index: 100;
@@ -23,7 +20,6 @@ html, body {
     margin-right: auto;
 }
 ._2B0td {
-    width: 30%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -40,4 +36,7 @@ html, body {
 
 ._2o72G path:hover {
     fill: #28a745;
+}
+.price-slider {
+	width: 300px;
 }

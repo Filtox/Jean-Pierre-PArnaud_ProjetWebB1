@@ -48,21 +48,24 @@ if ( isset( $_GET[ 'page' ] ) ) {
   </div>
 </nav>
 <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
-        </li>
-        <li class="nav-item active telprice" style="margin-left: 20px; margin-right: 20px;">Prix</li>
-      </ul>
-    </div>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-    </form>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
+      </li>
+      <li class="nav-item active telprice" style="margin-left: 20px; margin-right: 20px;">Prix</li>
+      <div class="price-slider">
+        <div id="skipstep" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"> </div>
+        <span id="skip-value-lower"></span> <span id="skip-value-upper"></span> </div>
+    </ul>
+  </div>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+  </form>
+</nav>
 <br>
 <br>
 <br>
@@ -527,12 +530,6 @@ if ( isset( $_GET[ 'page' ] ) ) {
   </div>
   <div class="apn-be"><span id="be-s" class="teal-apn"></span><span id="be-m" class="teal-apn"></span></div>
 </div>
-<div class="example">
-			<div id="skipstep" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
-    </div>
-    <span class="example-val" id="skip-value-lower"></span>
-    <span class="example-val" id="skip-value-upper"></span>
-</div>
 <footer> </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
@@ -563,19 +560,18 @@ noUiSlider.create(skipSlider, {
     range: {
         'min': 0,
         '10%': 10,
-        '20%': 20,
-        '30%': 30,
-        // Nope, 40 is no fun.
-        '40%': 40,
-        '50%': 50,
-        '60%': 60,
-        '70%': 70,
-        '80%': 80,
-        '90%': 90,
+        '20%': 25,
+        '30%': 50,
+        '40%': 100,
+        '50%': 250,
+        '60%': 500,
+        '70%': 1000,
+        '80%': 2500,
+        '90%': 5000,
         'max': 15000
     },
     snap: true,
-    start: [20, 90]
+    start: [20, 250]
 });
     
 var skipValues = [

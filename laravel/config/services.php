@@ -13,15 +13,9 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-/*
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
-    ],
-*/
-    'mailgun' => [
-        'domain' => env('sandbox13b8241a999542c6af7d0ff250f4ef5c.mailgun.org'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],

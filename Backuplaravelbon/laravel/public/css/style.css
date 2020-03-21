@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.navbar-fixed {
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+}
+#banner {
+	width: 100%;
+	height: 273px;
+	background-color: gray;
+	overflow: hidden;
+}
+
+.logo {
+    width: 18%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+._2B0td {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+._2o72G path {
+    cursor: pointer;
+    fill: #3d6abe;
+    stroke: #1e357d;
+    -webkit-transition: fill .3s;
+    -o-transition: fill .3s;
+    transition: fill .3s;
+}
+
+._2o72G path:hover {
+    fill: #28a745;
+}
+.price-slider {
+	width: 300px;
+}
+
+.tailless {
+    width: 10%;
+}

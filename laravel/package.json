@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@material-ui/core": "^4.9.7",
+        "@material-ui/icons": "^4.9.1",
         "ion-rangeslider": "^2.3.1",
         "react-ion-slider": "^1.0.5"
     }

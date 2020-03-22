@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from '@material-ui/core/Slider';
 import Header from './Header';
+import Drawer from './Drawer';
 
 function App() {
     const [value, setValue] = React.useState([20, 37]);
@@ -12,6 +13,7 @@ function App() {
     return (
         <div className="container">
             <Header />
+            <Drawer />
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">

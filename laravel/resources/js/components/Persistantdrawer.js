@@ -145,6 +145,16 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))}
         </List>
+        <Divider />
+        <List>
+          {['Recherche'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <Button color="inherit" href="homesearch">Compte</Button>
       </Drawer>
       <main
         className={clsx(classes.content, {

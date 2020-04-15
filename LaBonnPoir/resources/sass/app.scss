@@ -1,0 +1,44 @@
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+html {
+    font-size: 0.8rem;
+}
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1rem;
+    }
+}
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 1.4rem;
+    }
+}
+body {
+    background-color:#3c4e27de;
+    font-family: 'Sniglet', cursive;
+}
+.navbar {
+    background-color: green($color: #27843c);
+}
+.navbar-expand-md {
+    @include font-size(1.4rem);
+}
+.navbar-expand {
+    padding: 0;
+    font-size: 0.6rem;
+}
+.base {
+    fill: #3c4e27de;
+    cursor: pointer;
+    -webkit-transition: fill .5s ease-out;
+    -moz-transition: fill .5s ease-out;
+    -o-transition: fill .5s ease-out;
+    transition: fill .5s ease-out;
+}
+.base:hover {
+    fill: #bd4;
+}

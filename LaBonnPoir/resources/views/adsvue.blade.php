@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 <div id="app">
     @if($region)
@@ -27,6 +28,7 @@
     ></ad>
 </div>
 @endsection
+
 @section('script')
     <script src="{{ asset('js/vue.js') }}"></script>
 @endsection

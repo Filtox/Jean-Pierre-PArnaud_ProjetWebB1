@@ -4,6 +4,7 @@
         <h5 class="card-header">Votre recherche</h5>
         <div class="card-body">
             <form id="formAd" method="POST" :action="url">
+
                 <div class="form-group">
                     <label for="category">Catégorie</label>
                     <select class="custom-select" name="category" id="category" @change="onCategoryChange()" v-model="categorySelected">
@@ -13,6 +14,7 @@
                         </option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label for="region">Région</label>
                     <select class="custom-select" name="region" id="region" @change="onRegionChange()" v-model="regionSelected">
@@ -22,6 +24,7 @@
                         </option>
                     </select>
                 </div>
+
                 <div v-if="regionSelected != 0" class="form-group">
                     <label for="departement">Département</label>
                     <select class="custom-select" name="departement" id="departement" @change="onDepartementChange" v-model="departementSelected">
@@ -31,6 +34,7 @@
                         </option>
                     </select>
                 </div>
+
                 <div v-if="departementSelected != 0" class="form-group" >
                     <label for="commune">Commune</label>
                     <select class="custom-select" name="commune" id="commune" @change="onCommuneChange" v-model="communeSelected">
@@ -43,11 +47,16 @@
             </form>
         </div>
     </div>
+
     <br>
+
     <span v-html="ads"></span>
+
 </div>
 </template>
+
 <script>
+
     export default {
         props: [
             'url',
@@ -166,8 +175,10 @@
             }
         }
     }
+
     $('body').on('click', 'a.page-link', e => {
         e.preventDefault();
         app.__vue__.$refs.adComp.submit(e, '?' + ($(e.currentTarget).attr('href')).split('?')[1]);
     });
+
 </script>

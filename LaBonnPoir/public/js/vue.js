@@ -144,6 +144,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['url', 'categories', 'regions'],
   data: function data() {
@@ -824,9 +832,9 @@ var render = function() {
                       { key: category.id, domProps: { value: category.id } },
                       [
                         _vm._v(
-                          "\r\n                            " +
+                          "\n                            " +
                             _vm._s(category.name) +
-                            "\r\n                        "
+                            "\n                        "
                         )
                       ]
                     )
@@ -888,9 +896,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\r\n                            " +
+                          "\n                            " +
                             _vm._s(region.name) +
-                            "\r\n                        "
+                            "\n                        "
                         )
                       ]
                     )
@@ -950,9 +958,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\r\n                            " +
+                              "\n                            " +
                                 _vm._s(departement.nom) +
-                                "\r\n                        "
+                                "\n                        "
                             )
                           ]
                         )
@@ -1015,9 +1023,9 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\r\n                            " +
+                              "\n                            " +
                                 _vm._s(commune.nom) +
-                                "\r\n                        "
+                                "\n                        "
                             )
                           ]
                         )

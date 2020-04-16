@@ -1,5 +1,5 @@
 @foreach($ads as $ad)
-<a href="{{ route('annonces.show', $ad->id) }}" class="blockAd">
+<a href="{{ route('annonces.show', $ad->id) }}" class="bAd">
         <div class="card d-flex flex-row">
             <div class="card-header">
                 @if($ad->photos->isNotEmpty())

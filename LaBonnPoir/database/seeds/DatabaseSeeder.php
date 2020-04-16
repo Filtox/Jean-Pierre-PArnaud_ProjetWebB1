@@ -15,8 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'name' => 'Guillotin',
-            'prenom' => 'Arnaud',
-            'email' => 'arnaudguillotin@hotmail.fr',
+            'email' => 'arnaud.guillotin@ynov.com',
             'admin' => true,
             'password' => bcrypt('admin'),
             'email_verified_at' => Carbon::now(),
@@ -24,9 +23,15 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'DaSilva',
-            'prenom' => 'Pierre',
-            'email' => 'fedoqezef-8788@yopmail.com',
+            'email' => 'pierre.dasilva@ynov.com',
             'password' => bcrypt('admin'),
+            'email_verified_at' => Carbon::now(),
+        ]);
+
+        User::create([
+            'name' => 'Martin',
+            'email' => 'martin@chezlui.fr',
+            'password' => bcrypt('user'),
             'email_verified_at' => Carbon::now(),
         ]);
 
@@ -137,6 +142,123 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Autres', 'created_at' => now(), 'updated_at' => now()]
         ]);
 
-       
+        factory(App\Models\Ad::class, 40)->create();
+
+        DB::table('uploads')->insert([
+            [
+                'filename' => 'lMA9WKWaAIQbXUvKskzUXPVvTuiAVu.png',
+                'original_name' => 'lcd-32872_640.png',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'UNa9N1DFdCEcjW8rTrdsRA8knyk9t5.jpg',
+                'original_name' => 'puzzle-1243091_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'hQfmnrndF9sc4LyU863HOMRvjVfAcg.png',
+                'original_name' => 'rocking-horse-33719_640.png',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'iyvXQ5DTvA8a5pQiKEaLZDJBYH5bQV.jpg',
+                'original_name' => 'room-1336497_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'UxQM0O8M6EaEaaEyLB55xTxE9sFF3P.jpg',
+                'original_name' => 'teddy-1338895_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'HGTdP5oMzhVpOxpsLARXefAPhXhdh5.jpg',
+                'original_name' => 'tricycle-691587_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => '1UHu4r3v1V9sFfJCGPwLrftDictRtC.jpg',
+                'original_name' => 'workstation-336369_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'eBRC60HdOzLgNjdnhGXF2924BkD8Wj.jpg',
+                'original_name' => 'yoga-3053487_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'UVKM4QzICVV7Md6wUSCLeuCWwb4gNu.jpg',
+                'original_name' => 'alone-1869914_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'AiGOMDhpzLOTx31TYwy4eNgVb7jH21.jpg',
+                'original_name' => 'backpack-1836594_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'i74BWGJeZXKNlGqs8o5plypTi9G7br.jpg',
+                'original_name' => 'dog-1224267_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => '9cIx7bKaCr5nDi0BQqb03UvVugf3tH.png',
+                'original_name' => 'gypsy-4006361_640.png',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'CN0V5gjRIOWPWW7rM3qZVDVuO1Gu1w.jpg',
+                'original_name' => 'kitty-2948404_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'filename' => 'rrfs4iRK0A2eAfh4G6FXkhfB6FXwVy.jpg',
+                'original_name' => 'large-home-389271_640.jpg',
+                'index' => '',
+                'ad_id' => rand(1, 10),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+        factory(App\Models\Message::class, 10)->create();
     }
 }

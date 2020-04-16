@@ -1,7 +1,9 @@
-
-
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+// Dropzone
+@import "~dropzone/dist/dropzone.css";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 html {
@@ -18,21 +20,19 @@ html {
     }
 }
 body {
-    background-color:#3c4e27de;
-    font-family: 'Sniglet', cursive;
+    background-color:#5b872ade;
+    font-family: 'Oswald', swap;
 }
-.navbar {
-    background-color: green($color: #27843c);
-}
+
 .navbar-expand-md {
-    @include font-size(1.4rem);
+    @include font-size(1rem);
 }
 .navbar-expand {
     padding: 0;
     font-size: 0.6rem;
 }
 .base {
-    fill: #3c4e27de;
+    fill: #375613de;
     cursor: pointer;
     -webkit-transition: fill .5s ease-out;
     -moz-transition: fill .5s ease-out;
@@ -41,4 +41,31 @@ body {
 }
 .base:hover {
     fill: #bd4;
+}
+
+#my-dropzone {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    .message {
+        font-family: "Segoe UI Light", "Arial", serif;
+        font-weight: 600;
+        color: #0087F7;
+        @include font-size(1.5em);
+        letter-spacing: 0.05em;
+    }
+}
+
+a.bAd {
+    text-decoration: none;
+    color: inherit;
+    &:hover h4 {
+    color:#bd4;
+    }
+    &:hover .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+#accordion .btn-link a {
+    text-decoration: none;
 }

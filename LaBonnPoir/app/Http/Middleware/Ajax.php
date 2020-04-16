@@ -18,6 +18,7 @@ class Ajax
         if ($request->ajax()) {
             return $next($request);
         }
+
         abort(404);
     }
 }

@@ -43,7 +43,8 @@
                             {{ commune.nom }}
                         </option>
                     </select>
-                </div>
+
+                </div>    
             </form>
         </div>
     </div>
@@ -180,5 +181,6 @@
         e.preventDefault();
         app.__vue__.$refs.adComp.submit(e, '?' + ($(e.currentTarget).attr('href')).split('?')[1]);
     });
+
 
 </script>

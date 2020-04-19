@@ -62,6 +62,16 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="price">Prix</label>
+                        <input class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }} id="price" name="price" min="0" type="number" required >{{ old('price', isset($value) ? $value : '') }}</input>
+                    @if ($errors->has('price'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('price') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="form-group">
                     <label for="limit">Nombre de semaines de parution</label>
                     <select class="custom-select" id="limit" name="limit">
                         <option value="1">1</option>

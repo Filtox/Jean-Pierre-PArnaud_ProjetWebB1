@@ -25,6 +25,7 @@ $factory->define(App\Models\Ad::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence($nbWords = 3, $variableNbWords = true),
         'texte' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
+        'price' => rand(0,200),
         'category_id' => rand(1, 10),
         'region_id' => $region_id,
         'user_id' => rand(2, 3),

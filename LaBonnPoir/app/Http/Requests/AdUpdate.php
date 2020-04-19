@@ -26,6 +26,7 @@ class AdUpdate extends FormRequest
         return [
             'title' => ['required', 'string', 'max:100'],
             'texte' => ['required', 'string', 'max:1000'],
+            'price' => ['required', 'integer'],
         ];
     }
 }

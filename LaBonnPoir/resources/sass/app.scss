@@ -9,6 +9,10 @@
 html {
     font-size: 0.8rem;
 }
+.card-header.card-img-top{
+    width: 50%;
+    margin: auto;
+}
 @include media-breakpoint-up(sm) {
     html {
         font-size: 1rem;

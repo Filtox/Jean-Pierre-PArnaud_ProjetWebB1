@@ -86,7 +86,7 @@ class AdminController extends Controller
      * @param  App\Http\Requests\MessageRefuse  $request
      * @return \Illuminate\Http\Response
      */
-    public function refduse(MessageRefuseRequest $request)
+    public function refuse(MessageRefuseRequest $request)
     {
         $ad = $this->adRepository->getById($request->id);
 

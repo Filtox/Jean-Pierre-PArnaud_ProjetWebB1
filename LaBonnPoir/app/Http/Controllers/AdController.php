@@ -98,6 +98,7 @@ class AdController extends Controller
         $ad = $this->adRepository->create([
             'title' => $request->title,
             'texte' => $request->texte,
+            'price' => $request->price,
             'category_id' => $request->category,
             'region_id' => $request->region,
             'departement' => $request->departement,
@@ -157,7 +158,7 @@ class AdController extends Controller
     {
         $this->authorize('manage', $ad);
 
-        $this->adRepository->update($ad);
+        $this->adRepository->update($ad, $request);
 
         $request->session()->flash('status', "L'annonce a bien été modifiée.");
 

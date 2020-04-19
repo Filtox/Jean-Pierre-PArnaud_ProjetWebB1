@@ -9,7 +9,7 @@
         <div class="card-body">
 
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                Vous ne pouvez modifier que le titre et le texte de votre annonce.
+                Vous ne pouvez modifier que le titre et le texte et le prix de votre annonce.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -44,6 +44,11 @@
                             {{ $errors->first('texte') }}
                         </div>
                     @endif
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Prix</label>
+                    <input type="number" class="form-control" id="price" name="price" required>{{ old('price', isset($value) ? $value : $ad->price) }} euros</input>
                 </div>
 
                 <br>

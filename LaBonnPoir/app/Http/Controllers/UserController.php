@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Notifications\AdMessage;
-use App\Http\Requests\MessageAd;
+use App\Http\Requests\{ MessageAd, EmailUpdate };
 use App\Repositories\ { AdRepository, MessageRepository };
 
 class UserController extends Controller
@@ -132,7 +132,7 @@ class UserController extends Controller
      * @param  \App\Models\Ad  $ad
      * @return \Illuminate\Http\Response
      */
-    public function emailUpdate(EmailUpdate $request, Ad $ad)
+    public function emailUpdate(EmailUpdate $request)
     {
         auth()->user()->email = $request->email;
         auth()->user()->save();

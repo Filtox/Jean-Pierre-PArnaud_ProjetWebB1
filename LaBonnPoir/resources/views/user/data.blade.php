@@ -19,11 +19,11 @@
                         </tr>
                         <tr>
                             <td>Pour le site</td>
-                            <td>Annonces</td>
+                            <td>LaBonnPoir</td>
                         </tr>
                         <tr>
                             <td>A l'url</td>
-                            <td>annonces.oo</td>
+                            <td>LaBonnPoir.ynov</td>
                         </tr>
                         <tr>
                             <td>Le</td>

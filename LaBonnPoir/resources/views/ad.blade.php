@@ -10,7 +10,7 @@
 
     @include('partials.message', ['url' => route('message')])
 
-    <div class="card bg-light">
+    <div class="card bg-light" width="80%" height="80%">
         <h5 class="card-header">{{ $ad->title }}</h5>
         @if($photos->isNotEmpty())
             @if($photos->count() > 1)
@@ -44,6 +44,8 @@
             <hr>
             <p><u>Description :</u></p>
             <p class="card-text">{{ $ad->texte }}</p>
+            <p><u>Prix :</u></p>
+            <p class="card-text">{{ $ad->price }} euros</p>
             <hr>
             <p class="card-text"><u>Catégorie</u> : {{ $ad->category->name }}</p>
             <p class="card-text">

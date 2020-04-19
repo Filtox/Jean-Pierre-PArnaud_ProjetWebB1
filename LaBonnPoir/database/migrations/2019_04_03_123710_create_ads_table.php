@@ -17,6 +17,7 @@ class CreateAdsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('texte');
+            $table->Integer('price');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('region_id');
             $table->unsignedBigInteger('user_id')->default(0);

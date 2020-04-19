@@ -11129,6 +11129,11 @@ html {
   font-size: 0.8rem;
 }
 
+.card-header.card-img-top {
+  width: 50%;
+  margin: auto;
+}
+
 @media (min-width: 576px) {
   html {
     font-size: 1rem;

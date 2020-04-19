@@ -184,9 +184,9 @@ class AdRepository
      *
      * @param \App\Models\Ad $ad
      */
-    public function update($ad)
+    public function update($ad, $request)
     {
-        $ad->update();
+        $ad->update($request->toArray());
     }
 
     /**

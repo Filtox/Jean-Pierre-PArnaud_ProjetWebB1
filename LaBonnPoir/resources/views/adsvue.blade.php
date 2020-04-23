@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container"><a href=" {{ url ('search') }}">Recherche par mots clés ?</a></div>
 <div id="app">
     @if($region)
         <div id="start"

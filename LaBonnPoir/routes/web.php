@@ -40,7 +40,7 @@ Route::resource('annonces', 'AdController')
         'annonces' => 'ad'
     ])->except([
         'index', 'show', 'destroy'
-]);
+    ]);
 
 Route::prefix('annonces')->group(function () {
     Route::get('voir/{ad}', 'AdController@show')->name('annonces.show');
@@ -52,7 +52,7 @@ Route::prefix('annonces')->group(function () {
 Route::middleware('ajax')->group(function () {
     Route::post('images-save', 'UploadImagesController@store')->name('save-images');
     Route::delete('images-delete', 'UploadImagesController@destroy')->name('destroy-images');
-    Route::get('images-server','UploadImagesController@getServerImages')->name('server-images');
+    Route::get('images-server', 'UploadImagesController@getServerImages')->name('server-images');
     Route::post('message', 'UserController@message')->name('message');
 });
 
@@ -100,3 +100,30 @@ Route::prefix('utilisateur')->middleware('user')->group(function () {
 // Legal
 Route::view('legal', 'legal')->name('legal');
 Route::view('confidentialite', 'confidentialite')->name('confidentialite');
+
+
+
+// Recherche
+Route::any('/search', function () {
+    $q = Input::get('q');
+    $user = Ad::where('active', 'LIKE', '1')->Where('title', 'LIKE', '%' . $q . '%')->get();
+    if (count($user) > 0)
+        return view('search')->withDetails($user)->withQuery($q);
+    else return view('search')->withMessage('Pas de résultat. Essayez de rechercher encore !');
+});
+
+use App\Models\Ad;
+use Illuminate\Support\Facades\Input;
+
+
+Route::get('/search', function () {
+    return view('search');
+});
+Route::any('/search', function () {
+    $q = Input::get('q');
+    $user = Ad::where('active', 'LIKE', '1')->Where('title', 'LIKE', '%' . $q . '%')->get();
+    if (count($user) > 0)
+        return view('search')->withDetails($user)->withQuery($q);
+    else
+        return view('search')->withMessage('Pas de résultat. Essayez de rechercher encore !');
+});

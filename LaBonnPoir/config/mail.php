@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'labonnpoir@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'pierredasilva19@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'LaBonnPoir'),
     ],
 

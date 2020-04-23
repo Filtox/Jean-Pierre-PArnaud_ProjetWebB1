@@ -9,7 +9,7 @@
         <div class="card-body">
 
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                Vous ne pouvez modifier que le titre et le texte et le prix de votre annonce.
+                Vous ne pouvez modifier que le titre, le texte et le prix de votre annonce.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

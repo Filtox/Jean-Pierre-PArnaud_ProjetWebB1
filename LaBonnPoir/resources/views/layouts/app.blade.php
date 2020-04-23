@@ -40,7 +40,7 @@
                             </span>
                         </div>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('annonces') }}">Recherche</a>
+                        <a class="nav-link" href="{{ url('annonces') }}">Recherche</a>
                         </li>
                         <!-- Authentication Links -->
                         @guest

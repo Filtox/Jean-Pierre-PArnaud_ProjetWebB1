@@ -100,4 +100,3 @@ Route::prefix('utilisateur')->middleware('user')->group(function () {
 // Legal
 Route::view('legal', 'legal')->name('legal');
 Route::view('confidentialite', 'confidentialite')->name('confidentialite');
-

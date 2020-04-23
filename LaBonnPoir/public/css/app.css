@@ -11200,3 +11200,7 @@ a.bAd:hover .card {
 .reset {
   font-size: 0.8rem;
 }
+
+.card-header .rounded {
+  width: 100%;
+}

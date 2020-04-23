@@ -26,6 +26,7 @@
         :regions="{{ $regions }}"
         ref="adComp"
     ></ad>
+    
 </div>
 @endsection
 
